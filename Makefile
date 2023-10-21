@@ -8,15 +8,15 @@ download_url = "https://dlcdn.apache.org/dolphinscheduler/${version}/${full_name
 all: rpm
 
 clean:
-	rm -rf rpmbuild
+	rm -rf ~/rpmbuild
 
 mkdir: clean
-	mkdir -p rpmbuild
-	mkdir -p rpmbuild/BUILD
-	mkdir -p rpmbuild/BUILDROOT
-	mkdir -p rpmbuild/RPMS
-	mkdir -p rpmbuild/SOURCES
-	mkdir -p rpmbuild/SRPMS
+	mkdir -p ~/rpmbuild
+	mkdir -p ~/rpmbuild/BUILD
+	mkdir -p ~/rpmbuild/BUILDROOT
+	mkdir -p ~/rpmbuild/RPMS
+	mkdir -p ~/rpmbuild/SOURCES
+	mkdir -p ~/rpmbuild/SRPMS
 
 download: mkdir
 	[ ! -f "${full_name}.tar.gz" ] && curl -L -o ./$(full_name).tar.gz $(download_url); \
